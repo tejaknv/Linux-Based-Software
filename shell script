@@ -1,0 +1,14 @@
+#!/bin/bash
+
+mkdir teja
+
+cd teja
+
+awk 'BEGIN { FS="" ; RS="$" ; i=1 } {print $0 > "file"i".txt" } { i++ }' /home/knvpc/Desktop/teja/ShellScript/alphabet
+
+i=$(echo "$i" | sed 's/v3/V/' file100.txt)
+
+dialog --title "success" --msgbox "completed creating 100 file last file data is $i" 10 30
+
+
+
